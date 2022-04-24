@@ -7,16 +7,18 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
+    "lint": "eslint src --max-warnings=0",
     "lint:js": "eslint --ext \".js,.ts,.vue\" --ignore-path .gitignore .",
     "lint:prettier": "prettier --check .",
-    "lint": "yarn lint:js && yarn lint:prettier",
     "lintfix": "prettier --write --list-different . && yarn lint:js --fix",
     "prepare": "husky install",
     "test": "jest"
   },
   "lint-staged": {
-    "*.{js,ts,vue}": "eslint --cache",
-    "*.**": "prettier --check --ignore-unknown"
+    "src/**/*": [
+      "yarn lint --fix",
+      "yarn test --findRelatedTests --bail"
+    ]
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.13.6",
