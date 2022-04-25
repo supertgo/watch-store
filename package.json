@@ -15,7 +15,7 @@
     "test": "jest"
   },
   "lint-staged": {
-    "src/**/*": [
+    "componentes/**/*": [
       "yarn lint --fix",
       "yarn test --findRelatedTests --bail"
     ]
@@ -32,6 +32,7 @@
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.16.3",
+    "@faker-js/faker": "^6.2.0",
     "@nuxt/types": "^2.15.8",
     "@nuxt/typescript-build": "^2.1.0",
     "@nuxtjs/eslint-config-typescript": "^8.0.0",
@@ -46,9 +47,11 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-nuxt": "^3.1.0",
     "eslint-plugin-vue": "^8.2.0",
+    "faker": "^6.6.6",
     "husky": "^7.0.4",
     "jest": "^27.4.4",
     "lint-staged": "^12.1.2",
+    "miragejs": "^0.1.43",
     "postcss": "^8.4.4",
     "prettier": "^2.5.1",
     "ts-jest": "^27.1.1",

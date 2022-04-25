@@ -113,7 +113,6 @@
         </div>
       </div>
     </header>
-    <cart />
     <nuxt />
     <footer class="bg-gray-200">
       <div
@@ -128,9 +127,4 @@
   </div>
 </template>
 
-<script>
-// import Cart from '@/components/Cart';
-// export default {
-//   components: { Cart },
-// };
-</script>
+<script></script>
